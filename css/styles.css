@@ -48,8 +48,12 @@ body {
     margin-right: auto;
 }
 
-.logo {
-    color:var(--logo-studio-color);
+.header__container {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.logo {    
     font-family: 'Raleway', sans-serif;
     font-style: normal;
     font-weight: 700;
@@ -60,16 +64,20 @@ body {
     padding-bottom: 25px;
 }
 
-.logo-web {
+.header__logo {
+    color:var(--logo-studio-color);
+}
+
+.logo__web {
     color:var(--logo-web-color);
 }
 
-.nav {
+.nav__list {
     display: flex; 
     margin-left: 93px;
 }
 
-.header-nav {
+.nav {
     display: flex;
     align-items: center;
 }
@@ -85,9 +93,9 @@ body {
     align-items: center;
 }
 
-.nav-studio,
-.nav-portfolio,
-.nav-contakt {
+.nav__studio-link,
+.nav__portfolio-link,
+.nav__contakt-link {
     display: block;
     padding-top: 32px;
     padding-bottom: 32px;
@@ -102,17 +110,17 @@ body {
 }
 
 
-.nav-portfolio-item,
-.nav-contakt-item {
+.nav__portfolio-item,
+.nav__contakt-item {
    margin-left: 50px;
 }
 
-.current {
+.nav--current {
     color:var(--logo-web-color);
     position: relative;
 }
 
-.current::after {
+.nav--current::after {
     content: "";
     display: block;
     position: absolute;
@@ -123,17 +131,17 @@ body {
     border-radius: 2px;
 }
 
-.nav-studio:hover,
-.nav-portfolio:hover,
-.nav-contakt:hover,
-.nav-studio:focus,
-.nav-portfolio:focus,
-.nav-contakt:focus {
+.nav__studio-link:hover,
+.nav__portfolio-link:hover,
+.nav__contakt-link:hover,
+.nav__studio-link:focus,
+.nav__portfolio-link:focus,
+.nav__contakt-link:focus {
     color:var(--logo-web-color);
 }
 
-.header-mail,
-.header-tel {
+.contact__mail-link,
+.contact__tel-link {
     display:flex;
     align-items: center;
     font-weight: 500;
@@ -148,47 +156,47 @@ body {
     transition: color 250ms var(--timing-function);
 }
 
-.mail-text,
-.tel-number {
+.contact__mail-text,
+.contact__tel-number {
     margin-left: 10px;    
 }
 
-.header-mail:hover,
-.header-tel:hover, 
+.contact__mail-link:hover,
+.contact__tel-link:hover, 
 .footer-mail:hover,
 .footer-tel:hover {
     color: var(--logo-web-color);
 }
 
-.icon-envelope,
-.icon-smartphone {
+.contact__icon-envelope,
+.contact__icon-smartphone {
     transition: fill 250ms var(--timing-function);
 }
 
-.header-mail:hover .icon-envelope {
+.contact__mail-link:hover .contact__icon-envelope {
     fill: var(--logo-web-color);
 }
 
-.header-tel:hover .icon-smartphone {
+.contact__tel-link:hover .contact__icon-smartphone {
     fill: var(--logo-web-color);
 }
 
-.header-mail:focus,
-.header-tel:focus,
+.contact__mail-link:focus,
+.contact__tel-link:focus,
 .footer-mail:focus,
 .footer-tel:focus {
     color:var(--logo-web-color);
 }
 
-.header-mail:focus .icon-envelope {
+.contact__mail-link:focus .icon-envelope {
     fill: var(--logo-web-color);
 }
 
-.header-tel:focus .icon-smartphone {
+.contact__tel-link:focus .icon-smartphone {
     fill: var(--logo-web-color);
 }
 
-.header-tel-item {
+.contact__tel-item {
     margin-left: 30px;
 }
 
