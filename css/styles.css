@@ -924,7 +924,7 @@ body {
     padding: 40px;
 }
 
-.modal-button-close {
+.modal__button-close {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -941,24 +941,24 @@ body {
     transition: border-color 250ms var(--timing-function);
                 
 }
-.modal-close-icon {
+.modal__close-icon {
     display: block;
     fill: var(--logo-studio-color);
     transition: fill 250ms var(--timing-function);
 }
 
-.modal-button-close:hover,
-.modal-button-close:focus {
+.modal__button-close:hover,
+.modal__button-close:focus {
     border-color: var(--logo-web-color );
 }
-.modal-button-close:hover .modal-close-icon {
+.modal__button-close:hover .modal__close-icon {
     fill: var(--logo-web-color);
 }
-.modal-button-close:focus .modal-close-icon {
+.modal__button-close:focus .modal__close-icon {
     fill: var(--logo-web-color);
 }
 
-.modal-text {
+.modal__text {
     width: 448px;
     height: 23px;
     margin-bottom: 12px;
@@ -971,16 +971,18 @@ body {
     color: var(--accent-text-color);
 }
 
-.modal-input {
+.modal-form__input-data {
     position: relative;
     margin-bottom: 10px;
 }
 
-.coment {
+
+
+.modal-form__input-data--coment {
     margin-bottom: 18px;
 }
 
-.modal-label-item {
+.modal-form__label-item {
     display: block;
     margin-bottom: 4px;
 
@@ -993,7 +995,7 @@ body {
     color: var(--brand-text-color);
 }
 
-.modal-input-item {
+.modal-form__input-item {
     display: block;
     padding: 12px 0px 12px 42px;
     box-sizing: border-box;
@@ -1006,19 +1008,19 @@ body {
     transition: border-color 250ms var(--timing-function);
 }
 
-.modal-input-item:hover,
-.modal-input-item:focus  {
+.modal-form__input-item:hover,
+.modal-form__input-item:focus  {
     border-color: var(--logo-web-color);
 }
 
-.modal-input-item:hover + .modal-icon {
+.modal-form__input-item:hover + .modal-form__icon {
     fill: var(--logo-web-color);
 }
-.modal-input-item:focus + .modal-icon {
+.modal-form__input-item:focus + .modal-form__icon {
     fill: var(--logo-web-color);
 }
 
-.coment .modal-input-item {
+.modal-form__input-item--coment {
     display: block;
     height: 120px;
     padding: 12px 16px;
@@ -1029,21 +1031,21 @@ body {
     resize: none;
 }
 
-.coment .modal-input-item::placeholder {
+.modal-form__input-item--coment::placeholder {
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.01em;    
     color: rgba(117, 117, 117, 0.5);
 }
 
-.modal-icon {
+.modal-form__icon {
     position: absolute;
     top: 29px;
     left: 12px;
     transition: fill 250ms var(--timing-function);
 }
 
-.modal-checkbox {
+.modal-form__checkbox {
     position: relative;
     display: block;
     
@@ -1053,7 +1055,7 @@ body {
     margin-right: auto;
     margin-bottom: 32px;
 }
-.modal-checkbox-item {
+.modal-form__checkbox-item {
     display: block;
     padding-left: 20.38px;
     font-size: 14px;
@@ -1062,30 +1064,30 @@ body {
     color: var(--brand-text-color);
 }
 
-.modal-dogovor-link {
+.modal-form__dogovor-link {
     color: var(--logo-web-color) ;
 }
 
-.check-input {
+.modal-form__check-input {
     -webkit-appearance: none;
 }
 
-.check-icon {
+.modal-form__check-icon {
     position: absolute;
     left: 0;
     top: 4px;
 }
 
-.check-input:focus ~ .check-icon {
+.modal-form__check-input:focus ~ .modal-form__check-icon {
     fill: var(--logo-web-color);
 }
 
-.check-input:checked ~ .check-icon {
+.modal-form__check-input:checked ~ .modal-form__check-icon {
     fill: none;
     background-image: url(../images/icon/icon\ check.svg);
 }
 
-.modal-send-btn {
+.modal-form__send-btn {
     display: block;
     margin-left: auto;
     margin-right: auto;
