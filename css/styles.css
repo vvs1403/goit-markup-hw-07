@@ -49,6 +49,8 @@ body {
 }
 
 .header__container {
+    display: flex;
+    align-items: center;
     margin-left: auto;
     margin-right: auto;
 }
@@ -88,10 +90,9 @@ body {
     align-items: center;    
 }
 
-.header .container {
-    display: flex;
-    align-items: center;
-}
+/* .header .container {
+    
+} */
 
 .nav__studio-link,
 .nav__portfolio-link,
@@ -109,18 +110,19 @@ body {
     transition: color 250ms var(--timing-function);
 }
 
-
 .nav__portfolio-item,
 .nav__contakt-item {
    margin-left: 50px;
 }
 
-.nav--current {
+.nav__studio-link--current,
+.nav__portfolio-link--current {
     color:var(--logo-web-color);
     position: relative;
 }
 
-.nav--current::after {
+.nav__studio-link--current::after,
+.nav__portfolio-link--current::after {
     content: "";
     display: block;
     position: absolute;
@@ -163,8 +165,8 @@ body {
 
 .contact__mail-link:hover,
 .contact__tel-link:hover, 
-.footer-mail:hover,
-.footer-tel:hover {
+.address__mail-link:hover,
+.address__tel-link:hover {
     color: var(--logo-web-color);
 }
 
@@ -204,14 +206,19 @@ body {
     border: 1px solid #ECECEC;
 }
 
-/* Стилизация секции герой */
+/* Стилизация секции ГЕРОЙ */
 .hero {
     background-color:var(--hero-bg-color);
     padding-top: 200px;
     padding-bottom: 200px;
- }
+}
 
- .overlay {
+.hero__container{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero--overlay {
      max-width: 1600px;
      height: 600px;
      margin-left: auto;
@@ -221,9 +228,9 @@ body {
      rgba(47, 48, 58, 0.4),
      rgba(47, 48, 58, 0.4)),
      url(../images/bg-img-hero.jpg);
- }
+}
 
-.hero-name {
+.hero__name {
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
@@ -237,7 +244,7 @@ body {
     margin-right: auto;
 }
 
-.hero-btn {
+.hero__btn {
     font-family: var(--font-family-filter);
     font-weight: 700;
     font-size: 16px;
@@ -260,28 +267,34 @@ body {
     transition: background-color 250ms var(--timing-function);
 }  
 
-.hero-btn:hover,
-.hero-btn:focus {
+.hero__btn:hover,
+.hero__btn:focus {
     background-color:var(--hero-btn-bg-hover);
     cursor: pointer;
 }
+
+/* Стилизация секции НАШИ ОСОБЕННОСТИ */
 
 .peculiarities {
     padding-top: 94px;
     padding-bottom: 94px;
 }
 
-.peculiarities-work {
+.peculiarities__container {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.peculiarities__list {
     display: flex;
     margin: -15px;
 }
 
-.peculiarities-item {
+.peculiarities__item {
     flex-basis: calc(100%/4 - 30px);
     margin: 15px;
 }
-
-.peculiarities-item::before {
+.peculiarities__item::before {
     display: block;
     content: "";
     height: 120px;
@@ -293,27 +306,27 @@ body {
     border-radius: 4px;    
 }
 
-.icon-antena::before {
+.peculiarities__item--icon-antena::before {
     background-image:
     url(../images/icon/antenna\ 1.svg);
 }
 
-.icon-clock::before {
+.peculiarities__item--icon-clock::before {
     background-image:
     url(../images/icon/clock\ 1.svg);
 }
 
-.icon-diagram::before {
+.peculiarities__item--icon-diagram::before {
     background-image:
     url(../images/icon/diagram\ 1.svg);
 }
 
-.icon-astronaut::before {
+.peculiarities__item--icon-astronaut::before {
     background-image:
     url(../images/icon/astronaut\ 1.svg);
 }
 
-.peculiarities-title {
+.peculiarities__title {
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
@@ -322,7 +335,7 @@ body {
     color:var(--accent-text-color);
 }
 
-.peculiarities-text {
+.peculiarities__text {
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
@@ -332,30 +345,37 @@ body {
     min-height: 75px;
 }
 
-.what-doing {
+ /* Стилизация секции ЧЕМ МЫ ЗАНИМАЕМСЯ. */
+
+.work {
     padding-bottom: 94px;
 }
 
-.what-doing-img {
+.work__container {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.work__list {
     display: flex;
     margin-top: 50px;
 }
 
-.what-doing-card {
+.work__item {
     position: relative;
     display: block;
     flex-basis: calc((100% - 2*30px)/3);
 }
 
-.what-doing-card:not(:nth-child(3n)) {
+.work__item:not(:nth-child(3n)) {
     margin-right: 30px;
 }
 
-.what-doing-card:not(:nth-last-child(-n+3)) {
+.work__item:not(:nth-last-child(-n+3)) {
     margin-bottom: 30px;
 }
 
-.what-doing-title {
+.work__title {
     font-weight: 700;
     font-size: 36px;
     line-height: 1.17;
@@ -364,7 +384,7 @@ body {
     color:var(--accent-text-color);
 }
 
-.doing-overlay {
+.work__overlay {
     position: absolute;
     display: flex;
     justify-content: center;
@@ -375,7 +395,7 @@ body {
     background: rgba(47, 48, 58, 0.8);;
 }
 
-.doing-overlay-text {
+.work__text {
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
@@ -384,7 +404,7 @@ body {
     color: var(--hero-text-color);
 }
 
-   /* ---Наша команда--- */
+  /* Стили секции НАША КОМАНДА */
 
 .team {
     background-color:var(--team-bg-color);
@@ -393,13 +413,18 @@ body {
     padding-bottom: 94px;
 }
 
-.team-flex {
+.team__container {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.team__list {
     display: flex;
     margin: -15px;
     
 }
 
-.team-title {
+.team__title {
     font-weight: 700;
     font-size: 36px;
     line-height: 1.17;
@@ -409,7 +434,7 @@ body {
 
     margin-bottom: 50px;
 }
-.team-member {
+.team__item {
     background-color: var(--hero-text-color);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
@@ -418,12 +443,12 @@ body {
     margin: 15px;
 }
 
-.team-member-card {
+.team__member {
    padding-top: 30px;
    padding-bottom: 30px;
 }
 
-.team-name {
+.team__name {
     font-weight: 500;
     font-size: 16px;
     line-height: 1.19;
@@ -433,7 +458,7 @@ body {
     margin-bottom: 10px;
 }
 
-.team-position {
+.team__position {
     font-size: 16px;
     line-height: 1.19;
     letter-spacing: 0.03em;
@@ -441,21 +466,21 @@ body {
     margin-bottom: 16px;
 }
 
-.team-member-cocial {
+.member-cocial {
     display: flex;
     justify-content: center;
 }
 
-.member-cocial-icon {
+.member-cocial__item {
     width: 44px;
     height: 44px;
 }
 
-.member-cocial-icon:not(:first-child) {
+.member-cocial__item:not(:first-child) {
     margin-left: 10px;
 }
 
-.cocial-icon-link {
+.member-cocial__link {
     display:flex;
     justify-content: center;
     align-items: center;
@@ -467,35 +492,43 @@ body {
     transition: background-color 250ms var(--timing-function);
 }
 
-.cocial-icon-item {
+.member-cocial__icon {
     fill: #AFB1B8;
 
     transition: fill 250ms var(--timing-function);
 }
 
-.cocial-icon-link:hover,
-.cocial-icon-link:focus {
+.member-cocial__link:hover,
+.member-cocial__link:focus {
     background-color:var(--logo-web-color);
 }
 
-.cocial-icon-link:hover .cocial-icon-item,
-.cocial-icon-link:focus .cocial-icon-item {
+.member-cocial__link:hover .member-cocial__icon,
+.member-cocial__link:focus .member-cocial__icon {
     fill:var(--hero-text-color);
 }
 
-/* Стили для Постоянные Клиенты */
+/* Стили секции ПОСТОЯННЫЕ КЛИЕНТЫ */
 
 .clients {
     padding-top: 94px;
     padding-bottom: 94px;
 }
 
+.clients__container {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .client-logo {
-    display: flex;
+    display: flex;    
+}
+
+.clients__client-logo {
     margin: -15px;
 }
 
-.client-logo-item {
+.client-logo__item {
     box-sizing: border-box;
     width: 170px;
     height: 92px;
@@ -505,9 +538,9 @@ body {
     margin: 15px;
 }
 
-.client-logo-link {
+.client-logo__link {
     display:flex;
-    outline: transparent;
+    border: transparent;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -516,23 +549,23 @@ body {
     transition: border 250ms var(--timing-function);
 }
 
-.client-logo-link:hover .client-logo-icon,
-.client-logo-link:focus .client-logo-icon {
+.client-logo__link:hover .client-logo__icon,
+.client-logo__link:focus .client-logo__icon {
     fill: var(--logo-web-color);    
 }
 
-.client-logo-link:focus,
-.client-logo-link:hover {
+.client-logo__link:focus,
+.client-logo__link:hover {
     border: 1px solid var(--logo-web-color);
 }
 
-.client-logo-icon {
+.client-logo__icon {
     fill: #AFB1B8;
 
     transition: fill 250ms var(--timing-function);
 }
 
-.clients-title {
+.clients__title {
     font-weight: 700;
     font-size: 36px;
     line-height: 42px;
@@ -542,7 +575,7 @@ body {
     margin-bottom: 50px;
 }
 
-/* Стили для Подвал */
+/* Стили секции ПОДВАЛ */
 
 .footer {
     background-color:var(--hero-bg-color);
@@ -551,28 +584,33 @@ body {
     padding-bottom: 60px;
 }
 
-.logo-footer {
-    color: var(--hero-text-color);
-    font-family: 'Raleway', sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 26px;
-    line-height: 1.19;
-    letter-spacing: 0.03em;
+.footer__container {
+    display: flex;
+    align-items: baseline;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.footer-address {
+.footer__logo {
+    color: var(--hero-text-color);
+    padding: 0;
+}
+
+.address {
     font-weight: 400;
     font-style: normal;
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
-    color:var(--hero-text-color);
+    color:var(--hero-text-color);    
+}
+
+.footer__address {
     margin-top: 20px;
 }
 
-.footer-mail,
-.footer-tel {
+.address__mail-link,
+.address__tel-link {
     font-weight: 400;
     font-size: 14px;
     line-height: 1.71;
@@ -582,25 +620,24 @@ body {
     transition: color 250ms var(--timing-function);
 }
 
-.down-mail,
-.down-tel {
+.address__mail,
+.address__tel {
     margin-top: 9px;
 }
 
 /* footer-icon */
 
-.footer .container {
-    display: flex;
-    align-items: baseline;
+.cocial-address {
+    display: block;
+    width: 206px;    
 }
 
-.footer-cocial-address {
-    display: block;
-    width: 206px;
+.footer__cocial-address {
     margin-left: 70px;
 }
 
-.footer-cocial-title {
+
+.cocial-address__title {
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
@@ -609,21 +646,21 @@ body {
     margin-bottom: 20px;
 }
 
-.footer-cocial {
+.cocial-address__list {
     display: flex;
     justify-content: center;
 }
 
-.footer-cocial-icon {
+.cocial-address__item {
     width: 44px;
     height: 44px;
 }
 
-.footer-cocial-icon:not(:first-child) {
+.cocial-address__item:not(:first-child) {
     margin-left: 10px;
 }
 
-.footer-icon-link {
+.cocial-address__link {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -635,21 +672,21 @@ body {
     transition: background-color 250ms var(--timing-function);
 }
 
-.footer-icon-item {
+.cocial-address__icon {
     fill: var(--hero-text-color);
 }
 
-.footer-icon-link:hover,
-.footer-icon-link:focus {
+.cocial-address__link:hover,
+.cocial-address__link:focus {
     background-color: var(--logo-web-color); 
 }
 
 /* Подписка в футере */
 
-.footer-subscription {
+.footer__subscription {
     margin-left: auto;
 }
-.footer-subscription-text {
+.subscription__text {
     margin-bottom: 20px;
 
     font-weight: 700;
@@ -660,11 +697,11 @@ body {
     color:var(--hero-text-color);
 }
 
-.subscription-client {
+.subscription__client {
     display: flex;
 }
 
-.input-email {
+.subscription__input-email {
     display: inline-block;
     padding-left: 16px;
     width: 358px;
@@ -676,7 +713,7 @@ body {
     background-color: var(--hero-bg-color);
 }
 
-.input-email::placeholder {
+.subscription__input-email::placeholder {
     width: 47px;
     height: 20px;    
     font-size: 16px;
@@ -685,7 +722,7 @@ body {
     color: rgba(255, 255, 255, 0.6);
 }
 
-.subscription-btn {
+.subscription__btn {
     position: relative;
     width: 200px;
     height: 50px;
@@ -697,7 +734,7 @@ body {
     cursor: pointer;
 }
 
-.subscription-btn-text {
+.subscription__btn-text {
     position: absolute;
     top: 10px;
     left: 29px;
@@ -709,11 +746,12 @@ body {
     letter-spacing: 0.06em;    
     color: var(--hero-text-color);
 }
-.subscription-icon {
+.subscription__btn-icon {
     position: absolute;
     top: 13px;
     right: 28px;
 }
+
 
 /* Это стили для Порфолио */
 
