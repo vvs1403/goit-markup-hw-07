@@ -1,15 +1,17 @@
-:root {--font-family-filter:'Roboto';
---brand-text-color:#757575;
---accent-text-color:#212121;
---logo-web-color:#2196F3;
---logo-studio-color:#000;
---hero-text-color:#FFF;
---hero-bg-color:#2F303A;
---hero-btn-bg-hover:#188CE8;
---team-bg-color:#F5F4FA;
---foot-text-color:rgba(255,255,255,0.6);
---timing-function:cubic-bezier(0.4, 0, 0.2, 1);
+:root {
+    --font-family-filter: 'Roboto';
+    --brand-text-color: #757575;
+    --accent-text-color: #212121;
+    --logo-web-color: #2196F3;
+    --logo-studio-color: #000;
+    --hero-text-color: #FFF;
+    --hero-bg-color: #2F303A;
+    --hero-btn-bg-hover: #188CE8;
+    --team-bg-color: #F5F4FA;
+    --foot-text-color: rgba(255, 255, 255, 0.6);
+    --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 
 p,h1,h2,h3,ul {
     margin: 0;
@@ -39,12 +41,6 @@ body {
 
 /* Это стили для сайта СТУДИЯ, секция header */
 
-.container {
-    display: block;
-    width: 1200px;
-    padding-left: 15px;
-    padding-right: 15px;
-}
 
 .header__container {
     display: flex;
@@ -53,7 +49,7 @@ body {
     margin-right: auto;
 }
 
-.logo {    
+.logo {
     font-family: 'Raleway', sans-serif;
     font-style: normal;
     font-weight: 700;
@@ -183,8 +179,8 @@ body {
 
 .contact__mail-link:focus,
 .contact__tel-link:focus,
-.footer-mail:focus,
-.footer-tel:focus {
+.address__mail-link:focus,
+.address__tel-link:focus {
     color:var(--logo-web-color);
 }
 
